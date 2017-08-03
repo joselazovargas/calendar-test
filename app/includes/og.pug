@@ -1,0 +1,4 @@
+- var site = {title: 'site name', url: 'http:site.co', image: '/images/thumbnail-site-square.jpg', favicon: '/favicon.ico', description: 'Site Description'}
+
+each val in site
+  meta(property='og:#{key}', content='#{val}')

@@ -1,0 +1,29 @@
+{
+  "name": "calendar-test",
+  "version": "1.0.0",
+  "description": "base",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-cache": "latest",
+    "gulp-copy": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-uglify": "latest",
+    "pug": "latest",
+    "rupture": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
