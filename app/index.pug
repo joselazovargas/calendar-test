@@ -3,19 +3,39 @@ html(class="no-js" lang="")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="x-ua-compatible" content="ie=edge")
-		title Page Title
+		title Calendar Test
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		include ./includes/og.pug
 		link(rel="apple-touch-icon" href="apple-touch-icon.png")
+		script(src="js/main.min.js")
 		include ./includes/_styles.pug
 	body
-		//
-				[if lt IE 8]>
-				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-				<![endif]
+		.container
+			.row
+				.col-md-6
+					form.form-horizontal
+						.form-group
+							label(for="start-date", class="col-md-4") Start date:
+							.col-md-8
+								input(type="date" class="form-control" id="start-date")
+						.form-group
+							label(for="number-days", class="col-md-4") Number of days:
+							.col-md-8
+								input(type="text" class="form-control" id="number-days")
+						.form-group
+							label(for="country-code", class="col-md-4") Country Code:
+							.col-md-8
+								input(type="text" class="form-control" id="country-code")
+						.form-group
+							input(type="submit" class="form-control" value="Send")
+			.row
+				.col-md-6
+					script.
+						(function() {
+							var calendario = new Calendario();
+							calendario.generarHTML();
+							document.write(calendario.obtenerHTML());
+						})();
 
-		// Add your site or application content here
-		p Hello world! This is Pug Boilerplate
 
-		include ./includes/_styles.pug
+		include ./includes/_scripts.pug
